@@ -1,0 +1,56 @@
+{
+  "season": "2025-2026",
+  "last_updated": "2025-12-23 10:25:55",
+  "update_source": "local_only",
+  "note": "此文件由程序自动更新，也可手动编辑添加比赛。",
+  "games": [
+    {
+      "date": "2025-12-24",
+      "time": "19:35",
+      "home_team": "北京北汽",
+      "away_team": "广东东莞",
+      "venue": "首钢篮球中心",
+      "broadcast": "CCTV-5、咪咕视频"
+    },
+    {
+      "date": "2025-12-25",
+      "time": "19:35",
+      "home_team": "北京控股",
+      "away_team": "浙江稠州",
+      "venue": "北京奥体中心",
+      "broadcast": "咪咕视频、抖音"
+    },
+    {
+      "date": "2025-12-27",
+      "time": "19:35",
+      "home_team": "北京北汽",
+      "away_team": "辽宁本钢",
+      "venue": "首钢篮球中心",
+      "broadcast": "CCTV-5、咪咕视频、央视频"
+    },
+    {
+      "date": "2025-12-28",
+      "time": "19:35",
+      "home_team": "北京控股",
+      "away_team": "新疆广汇",
+      "venue": "北京奥体中心",
+      "broadcast": "咪咕视频、抖音"
+    },
+    {
+      "date": "2026-01-03",
+      "time": "19:35",
+      "home_team": "上海久事",
+      "away_team": "北京北汽",
+      "venue": "上海源深体育馆",
+      "broadcast": "CCTV-5、咪咕视频"
+    },
+    {
+      "date": "2026-01-04",
+      "time": "15:30",
+      "home_team": "山东高速",
+      "away_team": "北京控股",
+      "venue": "济南奥体中心",
+      "broadcast": "咪咕视频"
+    }
+  ]
+}
