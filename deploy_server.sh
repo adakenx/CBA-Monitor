@@ -44,10 +44,11 @@ crontab -l 2>/dev/null | grep -v "cba-monitor" | crontab - 2>/dev/null || true
 # 添加定时任务
 # 任务1: 每天北京时间09:00执行比赛检查（对应多伦多前一天20:00左右）
 # 任务2: 每周一北京时间10:00执行赛程更新
-(crontab -l 2>/dev/null; echo "# CBA比赛监控 - 每日检查") | crontab -
-(crontab -l 2>/dev/null; echo "0 9 * * * cd $WORK_DIR && source venv/bin/activate && python cba_monitor.py once >> $WORK_DIR/cba.log 2>&1") | crontab -
+# 注意: 使用完整的 Python 路径，避免 cron 环境下 source 命令失效
+(crontab -l 2>/dev/null; echo "# CBA比赛监控 - 每日检查 (北京时间09:00 = 多伦多前一天20:00)") | crontab -
+(crontab -l 2>/dev/null; echo "0 9 * * * /bin/bash -c \"cd $WORK_DIR && $WORK_DIR/venv/bin/python cba_monitor.py once\" >> $WORK_DIR/cba.log 2>&1") | crontab -
 (crontab -l 2>/dev/null; echo "# CBA比赛监控 - 每周更新赛程") | crontab -
-(crontab -l 2>/dev/null; echo "0 10 * * 1 cd $WORK_DIR && source venv/bin/activate && python cba_monitor.py update >> $WORK_DIR/cba.log 2>&1") | crontab -
+(crontab -l 2>/dev/null; echo "0 10 * * 1 /bin/bash -c \"cd $WORK_DIR && $WORK_DIR/venv/bin/python cba_monitor.py update\" >> $WORK_DIR/cba.log 2>&1") | crontab -
 
 echo "✅ Cron定时任务已配置"
 
